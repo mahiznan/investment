@@ -33,7 +33,8 @@ public class ProductController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Product> deleteProduct(@PathVariable Long id) {
-
+        productService.deleteProduct(id);
+        return ResponseEntity.status(200).build();
     }
 
 }
